@@ -18,21 +18,22 @@
 </head>
 
 <body class="bg-white text-gray-900">
+  <div id="scrollProgress"></div>
   <!-- ================= NAVBAR ================= -->
   <header class="sticky top-0 z-50 backdrop-blur bg-white/80 border-b">
     <nav class="mx-auto container-narrow px-4 py-3 flex items-center justify-between">
       <a href="#profile" class="font-extrabold tracking-tight text-xl">Nattapong<span
           class="text-blue-600">.io</span></a>
       <ul class="hidden md:flex gap-6 text-sm font-medium">
-        <li><a class="hover:text-blue-600" href="#profile">โปรไฟล์</a></li>
-        <li><a class="hover:text-blue-600" href="#skills">ทักษะ</a></li>
-        <li><a class="hover:text-blue-600" href="#projects">ผลงาน</a></li>
-        <li><a class="hover:text-blue-600" href="#education">การศึกษา</a></li>
-        <li><a class="hover:text-blue-600" href="#activities">กิจกรรม</a></li>
-        <li><a class="hover:text-blue-600" href="#career">เป้าหมาย</a></li>
-        <li><a class="hover:text-blue-600" href="#work">ประสบการณ์</a></li>
-        <li><a class="hover:text-blue-600" href="#contact">ติดต่อ</a></li>
-        
+        <li><a class="nav-link hover:text-blue-600 transition-colors" href="#profile">โปรไฟล์</a></li>
+        <li><a class="nav-link hover:text-blue-600 transition-colors" href="#skills">ทักษะ</a></li>
+        <li><a class="nav-link hover:text-blue-600 transition-colors" href="#projects">ผลงาน</a></li>
+        <li><a class="nav-link hover:text-blue-600 transition-colors" href="#education">การศึกษา</a></li>
+        <li><a class="nav-link hover:text-blue-600 transition-colors" href="#activities">กิจกรรม</a></li>
+        <li><a class="nav-link hover:text-blue-600 transition-colors" href="#career">เป้าหมาย</a></li>
+        <li><a class="nav-link hover:text-blue-600 transition-colors" href="#work">ประสบการณ์</a></li>
+        <li><a class="nav-link hover:text-blue-600 transition-colors" href="#contact">ติดต่อ</a></li>
+
       </ul>
       <a href="#contact"
         class="hidden md:inline-block bg-blue-600 text-white px-4 py-2 rounded-xl shadow hover:shadow-lg transition">Hire
@@ -41,13 +42,13 @@
     </nav>
     <div id="mobileMenu" class="md:hidden hidden border-t bg-white">
       <ul class="px-4 py-3 grid gap-2 text-sm">
-        <li><a class="block p-2 rounded hover:bg-gray-100" href="#profile">โปรไฟล์</a></li>
-        <li><a class="block p-2 rounded hover:bg-gray-100" href="#skills">ทักษะ</a></li>
-        <li><a class="block p-2 rounded hover:bg-gray-100" href="#projects">ผลงาน</a></li>
-        <li><a class="block p-2 rounded hover:bg-gray-100" href="#education">การศึกษา</a></li>
-        <li><a class="block p-2 rounded hover:bg-gray-100" href="#activities">กิจกรรม</a></li>
-        <li><a class="block p-2 rounded hover:bg-gray-100" href="#career">เป้าหมาย</a></li>
-        <li><a class="block p-2 rounded hover:bg-gray-100" href="#contact">ติดต่อ</a></li>
+        <li><a class="mobile-nav-link block p-2 rounded hover:bg-gray-100" href="#profile">โปรไฟล์</a></li>
+        <li><a class="mobile-nav-link block p-2 rounded hover:bg-gray-100" href="#skills">ทักษะ</a></li>
+        <li><a class="mobile-nav-link block p-2 rounded hover:bg-gray-100" href="#projects">ผลงาน</a></li>
+        <li><a class="mobile-nav-link block p-2 rounded hover:bg-gray-100" href="#education">การศึกษา</a></li>
+        <li><a class="mobile-nav-link block p-2 rounded hover:bg-gray-100" href="#activities">กิจกรรม</a></li>
+        <li><a class="mobile-nav-link block p-2 rounded hover:bg-gray-100" href="#career">เป้าหมาย</a></li>
+        <li><a class="mobile-nav-link block p-2 rounded hover:bg-gray-100" href="#contact">ติดต่อ</a></li>
       </ul>
     </div>
   </header>
@@ -55,21 +56,27 @@
   <!-- ================ HERO / PROFILE ================ -->
   <section id="profile" class="relative">
     <div class="mx-auto container-narrow px-4 py-14 grid md:grid-cols-[320px,1fr] gap-10 items-center">
-      <div class="justify-self-center">
-        <img src="assets/image/BaankProfile.jpg" alt="รูปโปรไฟล์"
+      <div class="justify-self-center reveal">
+        <img src="assets/image/BaankProfile2.jpg" alt="รูปโปรไฟล์"
           class="w-48 h-48 md:w-56 md:h-56 rounded-3xl object-cover shadow-xl ring-4 ring-blue-600/10" />
       </div>
 
-      <div>
+      <div class="reveal reveal-d1">
         <div
           class="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold">
           นักศึกษาปี 4 · UDRU</div>
         <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mt-3">ณัฐพงค์ เจริญตา
           <span class="block text-xl md:text-2xl font-semibold text-gray-600">Nattapong Charoenta</span>
         </h1>
+        <p class="mt-2 text-blue-600 font-semibold text-lg md:text-xl h-7">
+          <span id="typedRole"></span><span class="typing-cursor"></span>
+        </p>
         <p class="mt-4 text-gray-700 leading-relaxed">คณะวิทยาศาสตร์ สาขาเทคโนโลยีสารสนเทศ ·
-          มหาวิทยาลัยราชภัฏอุดรธานี<br />สนใจ: Full-Stack Development, Web Development, Data Science, Cybersecurity <br><br>
-        "เป็นนักศึกษาด้านเทคโนโลยีสารสนเทศ ที่มีความสนใจในการพัฒนาเว็บและการทำงานด้านข้อมูล มีประสบการณ์ฝึกฝนจากการทำโปรเจกต์และการเรียนรู้ด้วยตนเอง พร้อมเปิดรับการเรียนรู้ใหม่ ๆ และมุ่งมั่นพัฒนาตนเอง”</p>
+          มหาวิทยาลัยราชภัฏอุดรธานี<br />สนใจ: Full-Stack Development, Web Development, Data Science, Cybersecurity
+          <br><br>
+          "เป็นนักศึกษาด้านเทคโนโลยีสารสนเทศ ที่มีความสนใจในการพัฒนาเว็บและการทำงานด้านข้อมูล
+          มีประสบการณ์ฝึกฝนจากการทำโปรเจกต์และการเรียนรู้ด้วยตนเอง พร้อมเปิดรับการเรียนรู้ใหม่ ๆ และมุ่งมั่นพัฒนาตนเอง”
+        </p>
         <div class="mt-6 flex flex-wrap items-center gap-3">
           <a href="#projects" class="bg-blue-600 text-white px-5 py-2 rounded-xl shadow hover:shadow-lg">ดูผลงาน</a>
           <a href="#contact" class="px-5 py-2 rounded-xl border">ติดต่อ</a>
@@ -85,7 +92,7 @@
       <p class="text-gray-600 mt-2">ความสามารถด้านเทคนิคและการทำงาน</p>
 
       <div class="grid md:grid-cols-2 gap-8 mt-8">
-        <div class="bg-white border rounded-2xl p-6 shadow-sm">
+        <div class="bg-white border rounded-2xl p-6 shadow-sm hover-lift reveal">
           <h3 class="font-semibold mb-3">Programming</h3>
           <ul class="grid grid-cols-2 gap-x-6 gap-y-2 text-gray-700">
             <li>Python</li>
@@ -99,7 +106,7 @@
           </ul>
         </div>
 
-        <div class="bg-white border rounded-2xl p-6 shadow-sm">
+        <div class="bg-white border rounded-2xl p-6 shadow-sm hover-lift reveal reveal-d1">
           <h3 class="font-semibold mb-3">Tools</h3>
           <ul class="grid grid-cols-2 gap-x-6 gap-y-2 text-gray-700">
             <li>GitHub</li>
@@ -108,7 +115,7 @@
             <li>Visual Studio</li>
           </ul>
         </div>
-        <div class="bg-white border rounded-2xl p-6 shadow-sm">
+        <div class="bg-white border rounded-2xl p-6 shadow-sm hover-lift reveal reveal-d2">
           <h3 class="font-semibold mb-3">Soft Skills</h3>
           <ul class="list-disc list-inside text-gray-700 space-y-1">
             <li>การสื่อสาร</li>
@@ -119,41 +126,41 @@
       </div>
 
       <!-- แถบโลโก้/ภาพรวมเครื่องมือ -->
-      <div class="mt-10 grid grid-cols-3 md:grid-cols-6 gap-6 opacity-80">
-        <div class="p-3 border rounded-xl text-center">
+      <div class="mt-10 grid grid-cols-3 md:grid-cols-6 gap-6 reveal reveal-d3">
+        <div class="p-3 border rounded-xl text-center hover-lift">
           <img src="assets/image/Python.png" alt="Python" class="w-16 h-16 object-contain mx-auto" />
         </div>
-        <div class="p-3 border rounded-xl text-center">
+        <div class="p-3 border rounded-xl text-center hover-lift">
           <img src="assets/image/Java.png" alt="Java" class="w-16 h-16 object-contain mx-auto" />
         </div>
-        <div class="p-3 border rounded-xl text-center">
+        <div class="p-3 border rounded-xl text-center hover-lift">
           <img src="assets/image/html5.png" alt="HTML5" class="w-16 h-16 object-contain mx-auto" />
         </div>
-        <div class="p-3 border rounded-xl text-center">
+        <div class="p-3 border rounded-xl text-center hover-lift">
           <img src="assets/image/CSS.png" alt="CSS" class="w-16 h-16 object-contain mx-auto" />
         </div>
-        <div class="p-3 border rounded-xl text-center">
+        <div class="p-3 border rounded-xl text-center hover-lift">
           <img src="assets/image/javascript.png" alt="JavaScript" class="w-16 h-16 object-contain mx-auto" />
         </div>
-        <div class="p-3 border rounded-xl text-center">
+        <div class="p-3 border rounded-xl text-center hover-lift">
           <img src="assets/image/PHP.png" alt="PHP" class="w-16 h-16 object-contain mx-auto" />
         </div>
-        <div class="p-3 border rounded-xl text-center">
+        <div class="p-3 border rounded-xl text-center hover-lift">
           <img src="assets/image/c-plus-plus.png" alt="C++" class="w-16 h-16 object-contain mx-auto" />
         </div>
-        <div class="p-3 border rounded-xl text-center">
+        <div class="p-3 border rounded-xl text-center hover-lift">
           <img src="assets/image/Github.png" alt="GitHub" class="w-16 h-16 object-contain mx-auto" />
         </div>
-        <div class="p-3 border rounded-xl text-center">
+        <div class="p-3 border rounded-xl text-center hover-lift">
           <img src="assets/image/VScode.webp" alt="VS Code" class="w-16 h-16 object-contain mx-auto" />
         </div>
-        <div class="p-3 border rounded-xl text-center">
+        <div class="p-3 border rounded-xl text-center hover-lift">
           <img src="assets/image/OSK.jpg" alt="Server Management Studio" class="w-16 h-16 object-contain mx-auto" />
         </div>
-        <div class="p-3 border rounded-xl text-center">
+        <div class="p-3 border rounded-xl text-center hover-lift">
           <img src="assets/image/VisualStudio.webp" alt="Visual Studio" class="w-16 h-16 object-contain mx-auto" />
         </div>
-        <div class="p-3 border rounded-xl text-center">
+        <div class="p-3 border rounded-xl text-center hover-lift">
           <img src="assets/image/React-Logo-PNG.png" alt="React.js" class="w-16 h-16 object-contain mx-auto" />
         </div>
       </div>
@@ -167,49 +174,153 @@
       <p class="text-gray-600 mt-2">แสดงผลงานที่เคยทำ ทั้งในรายวิชาและนอกห้องเรียน</p>
 
       <div class="grid md:grid-cols-2 gap-6 mt-8">
+        <!-- Card 3 -->
+        <article class="bg-white border rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition hover-lift reveal">
+          <div class="relative overflow-hidden group cursor-pointer screenshot-gallery" role="button" tabindex="0"
+            data-images='["assets/image/SIPORA1.png", "assets/image/SIPORA2.png", "assets/image/SIPORA3.png", "assets/image/SIPORA4.png"]'>
+            <img src="assets/image/SIPORA1.png" alt="เว็บไซต์ e-commerce สำหรับขายแก้วน้ำเก็บอุณหภูมิ"
+              class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+            <div
+              class="absolute inset-0 bg-black/0 group-hover:bg-black/45 transition flex items-center justify-center">
+              <span
+                class="opacity-0 group-hover:opacity-100 transition text-white text-sm font-medium flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5">
+                  <path fill="currentColor"
+                    d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 5L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z" />
+                </svg>
+                ดูภาพทั้งหมด (3)
+              </span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold">เว็บไซต์ e-commerce สำหรับขายแก้วน้ำเก็บอุณหภูมิ</h3>
+            <p class="text-gray-600 mt-1">TypeScript, React + Tailwind CSS</p>
+            <p class="text-gray-600 mt-1">เว็บไซต์นี้คือ Sipora (Sipora Thermal Drinkware) แพลตฟอร์มอีคอมเมิร์ซสำหรับแบรนด์แก้วน้ำและกระบอกน้ำเก็บอุณหภูมิระดับพรีเมียม (Insulated Thermal Drinkware) ที่ออกแบบมาเพื่อตอบโจทย์ไลฟ์สไตล์คนทำงาน การออกกำลังกาย และการเดินทาง</p>
+            
+            <div class="mt-4 flex flex-wrap gap-3">
+              <a href="https://github.com/BankNatthaphong112/Sipora.git" target="_blank" rel="noopener"
+                class="project-link project-link-code">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4">
+                  <path fill="currentColor"
+                    d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.5 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.46-1.19-1.11-1.51-1.11-1.51-.91-.64.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.05 0-1.11.38-2.02 1.01-2.74-.1-.26-.44-1.31.1-2.72 0 0 .83-.27 2.72 1.05a9.2 9.2 0 0 1 2.48-.34c.84.01 1.68.12 2.48.34 1.88-1.32 2.71-1.05 2.71-1.05.54 1.41.2 2.46.1 2.72.63.72 1.01 1.63 1.01 2.74 0 3.92-2.34 4.78-4.57 5.04.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.82 0 .28.18.61.69.5A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z" />
+                </svg>
+                ดูโค้ด (GitHub)
+              </a>
+              <a href="https://sipora-premium-insulated-drinkware.ai.studio" target="_blank" rel="noopener"
+                class="project-link project-link-live">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4">
+                  <path fill="currentColor"
+                    d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3zm-9 0a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7H5V5h7V3z" />
+                </svg>
+                เยี่ยมชมเว็บไซต์
+              </a>
+            </div>
+          </div>
+        </article>
+
         <!-- Card 1 -->
-        <article class="bg-white border rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
-          <img src="assets/image/ShopFloor2.png" alt="เว็บไซต์ต์จัดการกระบวนการภายในเว็บไซต์ร้านขนม"
-            class="w-full h-48 object-cover">
+        <article
+          class="bg-white border rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition hover-lift reveal">
+          <div class="relative overflow-hidden group cursor-pointer screenshot-gallery" role="button" tabindex="0"
+            data-images='["assets/image/ShopFloor1.png", "assets/image/ShopFloor2.png", "assets/image/ShopFloor3.png", "assets/image/ShopFloor4.png", "assets/image/ShopFloor5.png", "assets/image/ShopFloor6.png", "assets/image/ShopFloor7.png", "assets/image/ShopFloor8.png", "assets/image/ShopFloor9.png", "assets/image/ShopFloor10.png", "assets/image/ShopFloor11.png"]'>
+            <img src="assets/image/ShopFloor2.png" alt="เว็บไซต์ต์จัดการกระบวนการภายในเว็บไซต์ร้านขนม"
+              class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+            <div
+              class="absolute inset-0 bg-black/0 group-hover:bg-black/45 transition flex items-center justify-center">
+              <span
+                class="opacity-0 group-hover:opacity-100 transition text-white text-sm font-medium flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5">
+                  <path fill="currentColor"
+                    d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 5L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z" />
+                </svg>
+                ดูภาพทั้งหมด (3)
+              </span>
+            </div>
+          </div>
           <div class="p-6">
             <h3 class="text-xl font-bold">เว็บไซต์ต์จัดการกระบวนการภายในเว็บไซต์ร้านขนม</h3>
             <p class="text-gray-600 mt-1">Google app script</p>
             <p class="text-gray-600 mt-1">พัฒนา Shopfloor Web Application สำหรับจัดการกระบวนการภายในเว็บไซต์ร้านขนม
               ในรูปแบบ MVP เพื่อให้ลูกค้าได้ทดลองใช้งานจริง พัฒนาโดยใช้ google app script</p>
-            <div class="mt-4 flex gap-3">
+            <p class="mt-4 text-xs text-gray-400">Account สำหรับทดสอบ Username:Admin1 Password:A123456</p>
+            <div class="mt-4 flex flex-wrap gap-3">
 
-              <a class="text-blue-600 underline screenshot-gallery"
-                data-images='["assets/image/ShopFloor1.png", "assets/image/ShopFloor2.png", "assets/image/ProjectVisualS3.png"]'
-                href="#">Screenshot</a>
+              <a href="https://script.google.com/macros/s/AKfycbyszg2_hj7H_GQ0h9CDHFVbk25nzA4pMmSN44V8pdc/dev"
+                target="_blank" rel="noopener" class="project-link project-link-live">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4">
+                  <path fill="currentColor"
+                    d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3zm-9 0a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7H5V5h7V3z" />
+                </svg>
+                เยี่ยมชมเว็บไซต์
+              </a>
             </div>
           </div>
         </article>
 
         <!-- Card 2 (ตัวอย่างเพิ่ม) -->
-        <article class="bg-white border rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
-          <img src="assets/image/Ai.png" alt="ระบบวินิจฉัยโรคผิวหนัง" class="w-full h-48 object-cover">
+        <article
+          class="bg-white border rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition hover-lift reveal reveal-d1">
+          <div class="relative overflow-hidden group cursor-pointer screenshot-gallery" role="button" tabindex="0"
+            data-images='["assets/image/Ai.png"]'>
+            <img src="assets/image/Ai.png" alt="ระบบวินิจฉัยโรคผิวหนัง"
+              class="w-full h-48 object-cover transition duration-300 group-hover:scale-105">
+            <div
+              class="absolute inset-0 bg-black/0 group-hover:bg-black/45 transition flex items-center justify-center">
+              <span
+                class="opacity-0 group-hover:opacity-100 transition text-white text-sm font-medium flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5">
+                  <path fill="currentColor"
+                    d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 5L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z" />
+                </svg>
+                ดูภาพทั้งหมด (2)
+              </span>
+            </div>
+          </div>
           <div class="p-6">
             <h3 class="text-xl font-bold">ระบบวินิจฉัยโรคผิวหนัง</h3>
             <p class="text-gray-600 mt-1">Python</p>
             <p class="text-gray-600 mt-1">พัฒนาระบบวิเคราะห์และจำแนกโรคผิวหนังจากภาพด้วย Deep Learning (CNN) โดยใช้
               EfficientNetV2 เป็นโมเดลหลัก พัฒนาด้วยภาษา Python เพื่อช่วยเพิ่มความแม่นยำในการจำแนกประเภทโรคผิวหนัง</p>
-            <div class="mt-4 flex gap-3">
-              <a class="text-blue-600 underline screenshot-gallery"
-                data-images='["assets/image/diabetes.jpg", "assets/image/diabetes2.png"]'>Screenshot</a>
+            <p class="mt-4 text-xs text-gray-400">แตะที่ภาพด้านบนเพื่อดูภาพหน้าจอทั้งหมด</p>
+            <div class="mt-4 flex flex-wrap gap-3">
+              <a href="#" target="_blank" rel="noopener" class="project-link project-link-drive">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.3 78" class="w-4 h-4">
+                  <path fill="#0066da"
+                    d="m6.6 66.85 3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8h-27.5c0 1.55.4 3.1 1.2 4.5z" />
+                  <path fill="#00ac47"
+                    d="m43.65 25-13.75-23.8c-1.35.8-2.5 1.9-3.3 3.3l-25.4 44c-.8 1.4-1.2 2.95-1.2 4.5h27.5z" />
+                  <path fill="#ea4335"
+                    d="m73.55 76.8c1.35-.8 2.5-1.95 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5h-27.502l5.852 11.5z" />
+                  <path fill="#00832d"
+                    d="m43.65 25 13.75-23.8c-1.35-.8-2.9-1.2-4.5-1.2h-18.5c-1.6 0-3.15.45-4.5 1.2z" />
+                  <path fill="#2684fc"
+                    d="m59.8 53h-32.3l-13.75 23.8c1.35.8 2.9 1.2 4.5 1.2h50.8c1.6 0 3.15-.45 4.5-1.2z" />
+                  <path fill="#ffba00"
+                    d="m73.4 26.5-12.7-22c-.8-1.4-1.95-2.5-3.3-3.3l-13.75 23.8 16.15 28h27.45c0-1.55-.4-3.1-1.2-4.5z" />
+                </svg>
+                ดูโค้ด (Google Drive)
+              </a>
+
             </div>
           </div>
         </article>
-      </div>
 
-      <div class="text-center mt-10">
-        <a href="https://github.com/BankNatthaphong112?tab=repositories" target="_blank"
-          class="inline-flex items-center gap-2 px-5 py-3 rounded-xl border hover:bg-gray-50">
-          ไปที่ GitHub Repository รวมผลงาน
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5">
-            <path fill="currentColor" d="M14 3l7 7-1.41 1.41L15 7.83V20h-2V7.83l-4.59 4.58L7 10z" />
-          </svg>
-        </a>
+           
+        
       </div>
+    </div>
+    </article>
+    </div>
+
+    <div class="text-center mt-10">
+      <a href="https://github.com/BankNatthaphong112?tab=repositories" target="_blank"
+        class="inline-flex items-center gap-2 px-5 py-3 rounded-xl border hover:bg-gray-50">
+        ไปที่ GitHub Repository รวมผลงาน
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5">
+          <path fill="currentColor" d="M14 3l7 7-1.41 1.41L15 7.83V20h-2V7.83l-4.59 4.58L7 10z" />
+        </svg>
+      </a>
+    </div>
     </div>
   </section>
 
@@ -218,7 +329,7 @@
     <div class="mx-auto container-narrow px-4 py-14">
       <h2 class="text-2xl md:text-3xl font-bold">Education</h2>
 
-      <div class="mt-6 grid md:grid-cols-[80px,1fr] items-start gap-6">
+      <div class="mt-6 grid md:grid-cols-[80px,1fr] items-start gap-6 reveal">
         <img src="assets/image/skwk.webp" alt="SKWK" class="w-16 h-16 object-contain mx-auto md:mx-0">
         <div>
           <h3 class="text-xl font-semibold">จบชั้นมัธยมต้น</h3>
@@ -227,7 +338,7 @@
         </div>
       </div>
 
-      <div class="mt-6 grid md:grid-cols-[80px,1fr] items-start gap-6">
+      <div class="mt-6 grid md:grid-cols-[80px,1fr] items-start gap-6 reveal reveal-d1">
         <img src="assets/image/skwk.webp" alt="SKWK" class="w-16 h-16 object-contain mx-auto md:mx-0">
         <div>
           <h3 class="text-xl font-semibold">จบชั้นมัธยมปลาย</h3>
@@ -236,7 +347,7 @@
         </div>
       </div>
 
-      <div class="mt-6 grid md:grid-cols-[80px,1fr] items-start gap-6">
+      <div class="mt-6 grid md:grid-cols-[80px,1fr] items-start gap-6 reveal reveal-d2">
         <img src="assets/image/udru.webp" alt="UDRU" class="w-16 h-16 object-contain mx-auto md:mx-0">
         <div>
           <h3 class="text-xl font-semibold">คณะวิทยาศาสตร์ สาขาเทคโนโลยีสารสนเทศ</h3>
@@ -253,7 +364,7 @@
     <div class="mx-auto container-narrow px-4 py-14">
       <h2 class="text-2xl md:text-3xl font-bold">Work Experience</h2>
 
-      <div class="mt-6 grid md:grid-cols-[80px,1fr] items-start gap-6">
+      <div class="mt-6 grid md:grid-cols-[80px,1fr] items-start gap-6 reveal reveal-d3">
         <img src="assets/image/esarndotcom.jpg" alt="Company 1" class="w-16 h-16 object-contain mx-auto md:mx-0">
         <div>
           <h3 class="text-xl font-semibold">ฝึกงานที่— บริษัท อีสานดอทคอม จำกัด</h3>
@@ -262,9 +373,9 @@
           <p class="text-gray-600 mt-1">ฝึกงานในตำแหน่ง Frontend Developer <br>
             -ฝึกประสบการณ์ด้านการพัฒนาเว็บไซต์และระบบ Web Application <br>
             -พัฒนาและปรับปรุงส่วนติดต่อผู้ใช้งาน
-            <h1 class="text-lg font-bold mt-4">งานที่ได้รับผิดชอบ</h1>
-            พัฒนา Shopfloor Web Application สำหรับจัดการกระบวนการภายในเว็บไซต์ร้านขนม พัฒนาด้วย google app script
-            ในรูปแบบ MVP เพื่อให้ลูกค้าทดลองใช้งานจริงและประเมินความเหมาะสมของระบบ โดยรับผิดชอบด้าน Frontend </p>
+          <h1 class="text-lg font-bold mt-4">งานที่ได้รับผิดชอบ</h1>
+          พัฒนา Shopfloor Web Application สำหรับจัดการกระบวนการภายในเว็บไซต์ร้านขนม พัฒนาด้วย google app script
+          ในรูปแบบ MVP เพื่อให้ลูกค้าทดลองใช้งานจริงและประเมินความเหมาะสมของระบบ โดยรับผิดชอบด้าน Frontend </p>
         </div>
       </div>
     </div>
@@ -277,19 +388,43 @@
       <p class="text-gray-600 mt-2">เพื่อแสดงความสามารถรอบด้าน</p>
 
       <div class="grid md:grid-cols-3 gap-6 mt-8">
-        <div class="bg-white border rounded-2xl p-6 shadow-sm">
-          <img src="assets/image/Ethical Hacker.jpg" alt="Ethical Hacker"
-            class="w-full h-36 object-cover rounded-xl mb-3">
+        <div class="bg-white border rounded-2xl p-6 shadow-sm hover-lift reveal">
+          <div class="relative overflow-hidden group cursor-pointer rounded-xl mb-3 screenshot-gallery" role="button"
+            tabindex="0" data-images='["assets/image/Ethical Hacker.jpg"]'>
+            <img src="assets/image/Ethical Hacker.jpg" alt="Ethical Hacker"
+              class="w-full h-36 object-cover transition duration-300 group-hover:scale-105">
+            <div
+              class="absolute inset-0 bg-black/0 group-hover:bg-black/45 transition flex items-center justify-center">
+              <span
+                class="opacity-0 group-hover:opacity-100 transition text-white text-sm font-medium flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5">
+                  <path fill="currentColor"
+                    d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 5L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z" />
+                </svg>
+                ดูภาพเต็ม
+              </span>
+            </div>
+          </div>
           <h3 class="font-semibold">ผู้เข้าร่วมอบรมและทดสอบ Ethical Hacker</h3>
-          <a class="text-blue-600 underline screenshot-gallery"
-            data-images='["assets/image/Ethical Hacker.jpg"]'>Screenshot</a>
         </div>
-        <div class="bg-white border rounded-2xl p-6 shadow-sm">
-          <img src="assets/image/Introduction to Cybersecurity.jpg" alt="Introduction to Cybersecurity"
-            class="w-full h-36 object-cover rounded-xl mb-3">
+        <div class="bg-white border rounded-2xl p-6 shadow-sm hover-lift reveal reveal-d1">
+          <div class="relative overflow-hidden group cursor-pointer rounded-xl mb-3 screenshot-gallery" role="button"
+            tabindex="0" data-images='["assets/image/Introduction to Cybersecurity.jpg"]'>
+            <img src="assets/image/Introduction to Cybersecurity.jpg" alt="Introduction to Cybersecurity"
+              class="w-full h-36 object-cover transition duration-300 group-hover:scale-105">
+            <div
+              class="absolute inset-0 bg-black/0 group-hover:bg-black/45 transition flex items-center justify-center">
+              <span
+                class="opacity-0 group-hover:opacity-100 transition text-white text-sm font-medium flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5">
+                  <path fill="currentColor"
+                    d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 5L20.49 19zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z" />
+                </svg>
+                ดูภาพเต็ม
+              </span>
+            </div>
+          </div>
           <h3 class="font-semibold">ผู้เข้าร่วมอบรมและทดสอบ Introduction to Cybersecurity</h3>
-          <a class="text-blue-600 underline screenshot-gallery"
-            data-images='["assets/image/Introduction to Cybersecurity.jpg"]'>Screenshot</a>
         </div>
 
       </div>
@@ -299,8 +434,8 @@
   <!-- ================ CAREER INTEREST ================ -->
   <section id="career" class="bg-gray-50">
     <div class="mx-auto container-narrow px-4 py-14">
-      <h2 class="text-2xl md:text-3xl font-bold">เป้าหมายในอนาคต</h2>
-      <p class="text-gray-700 mt-3 leading-relaxed">มุ่งสู่การเป็น <strong>Web Developer</strong>
+      <h2 class="text-2xl md:text-3xl font-bold reveal">เป้าหมายในอนาคต</h2>
+      <p class="text-gray-700 mt-3 leading-relaxed reveal reveal-d1">มุ่งสู่การเป็น <strong>Web Developer</strong>
         ที่สามารถสร้างระบบอัจฉริยะและเว็บแอป</p>
 
     </div>
@@ -315,21 +450,27 @@
 
 
       <div class="mt-8 grid md:grid-cols-3 gap-6">
-        <a href="tel:096-352-2209" class="group border rounded-2xl p-6 hover:shadow-md">
-          <div class="font-semibold">Phone</div>
-          <div class="text-blue-600 group-hover:underline">096-352-2209</div>
-        </a>
-        <a href="mailto:66040233112@udru.ac.th" class="group border rounded-2xl p-6 hover:shadow-md">
-          <div class="font-semibold">Email</div>
-          <div class="text-blue-600 group-hover:underline">66040233112@udru.ac.th</div>
-        </a>
+        <div class="group border rounded-2xl p-6 hover:shadow-md hover-lift reveal">
+          <a href="tel:096-352-2209">
+            <div class="font-semibold">Phone</div>
+            <div class="text-blue-600 group-hover:underline">096-352-2209</div>
+          </a>
+          <button type="button" class="copy-btn" data-copy="096-352-2209">คัดลอกเบอร์โทร</button>
+        </div>
+        <div class="group border rounded-2xl p-6 hover:shadow-md hover-lift reveal reveal-d1">
+          <a href="mailto:66040233112@udru.ac.th">
+            <div class="font-semibold">Email</div>
+            <div class="text-blue-600 group-hover:underline">66040233112@udru.ac.th</div>
+          </a>
+          <button type="button" class="copy-btn" data-copy="66040233112@udru.ac.th">คัดลอกอีเมล</button>
+        </div>
         <a href="https://github.com/BankNatthaphong112" target="_blank"
-          class="group border rounded-2xl p-6 hover:shadow-md">
+          class="group border rounded-2xl p-6 hover:shadow-md hover-lift reveal reveal-d2">
           <div class="font-semibold">GitHub</div>
           <div class="text-blue-600 group-hover:underline">github.com/BankNatthaphong112</div>
         </a>
         <a href="https://www.facebook.com/share/19Xah9oXTd/?mibextid=wwXIfr" target="_blank"
-          class="group border rounded-2xl p-6 hover:shadow-md">
+          class="group border rounded-2xl p-6 hover:shadow-md hover-lift reveal reveal-d3">
           <div class="font-semibold">LinkedIn / Facebook</div>
           <div class="text-blue-600 group-hover:underline">Nattapong Charoenta</div>
         </a>
@@ -353,18 +494,46 @@
   </footer>
 
   <!-- ================ MODAL GALLERY ================ -->
-  <div id="galleryModal" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50">
-    <div class="relative bg-white rounded-2xl p-4 flex flex-col items-center modal-panel">
-      <button id="closeGallery" class="absolute top-3 right-3 text-gray-700 hover:text-red-600 text-2xl font-bold"
-        aria-label="close screenshot">&times;</button>
-      <img id="galleryImg" src="" alt="Screenshot" class="rounded-xl modal-img" />
-      <div class="flex justify-between w-full mt-4">
-        <button id="prevImg" class="modal-navbtn">◀ Prev</button>
-        <button id="nextImg" class="modal-navbtn">Next ▶</button>
+  <div id="galleryModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm hidden items-center justify-center z-50 p-4">
+    <div class="relative modal-panel">
+      <button id="closeGallery" class="modal-close-btn" aria-label="close screenshot">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5">
+          <path fill="currentColor"
+            d="M6.4 5L5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12 19 6.4 17.6 5 12 10.6z" />
+        </svg>
+      </button>
+
+      <div class="modal-image-wrap">
+        <img id="galleryImg" src="" alt="Screenshot" class="modal-img" />
+
+        <button id="prevImg" class="modal-nav-arrow modal-nav-prev" aria-label="ภาพก่อนหน้า">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
+            <path fill="currentColor" d="M15.4 7.4L14 6l-6 6 6 6 1.4-1.4L10.8 12z" />
+          </svg>
+        </button>
+        <button id="nextImg" class="modal-nav-arrow modal-nav-next" aria-label="ภาพถัดไป">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
+            <path fill="currentColor" d="M8.6 16.6L10 18l6-6-6-6-1.4 1.4L13.2 12z" />
+          </svg>
+        </button>
+
+        <div id="galleryCounter" class="modal-counter"></div>
       </div>
-      <p class="text-center text-xs text-gray-500 mt-2">คลิกพื้นที่มืดรอบ ๆ เพื่อปิด</p>
+
+      <div id="galleryDots" class="modal-dots"></div>
     </div>
   </div>
+
+
+  <!-- ปุ่มกลับขึ้นบนสุด -->
+  <button id="backToTop" aria-label="กลับขึ้นด้านบน">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5">
+      <path fill="currentColor" d="M12 4l-8 8h5v8h6v-8h5z" />
+    </svg>
+  </button>
+
+  <!-- Toast แจ้งเตือน -->
+  <div id="toast"></div>
 
   <!-- ================ SMALL JS ================ -->
   <script>
@@ -375,19 +544,155 @@
     const btn = document.getElementById('menuBtn');
     const menu = document.getElementById('mobileMenu');
     btn?.addEventListener('click', () => menu.classList.toggle('hidden'));
+    // ปิดเมนูมือถืออัตโนมัติเมื่อคลิกลิงก์
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => menu.classList.add('hidden'));
+    });
 
-    // Screenshot Gallery (หลายภาพ เลื่อนซ้าย-ขวา)
+    // ================= แถบ Progress บอกตำแหน่งการอ่าน =================
+    const progressBar = document.getElementById('scrollProgress');
+    function updateScrollProgress() {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      progressBar.style.width = pct + '%';
+    }
+
+    // ================= Navbar เปลี่ยนเงาตอนสกอลล์ + ปุ่มกลับขึ้นบน =================
+    const header = document.querySelector('header');
+    const backToTop = document.getElementById('backToTop');
+    function updateChromeOnScroll() {
+      const y = window.scrollY;
+      header.classList.toggle('nav-scrolled', y > 8);
+      backToTop.classList.toggle('show', y > 500);
+    }
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // ================= Active nav link ตามตำแหน่งสกอลล์ =================
+    const sections = Array.from(document.querySelectorAll('section[id]'));
+    const navLinks = Array.from(document.querySelectorAll('.nav-link'));
+    function updateActiveNav() {
+      let currentId = sections[0]?.id;
+      const scrollPos = window.scrollY + 120; // ชดเชยความสูง navbar
+      for (const sec of sections) {
+        if (sec.offsetTop <= scrollPos) currentId = sec.id;
+      }
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + currentId);
+      });
+    }
+
+    let scrollTicking = false;
+    function onScroll() {
+      if (!scrollTicking) {
+        window.requestAnimationFrame(() => {
+          updateScrollProgress();
+          updateChromeOnScroll();
+          updateActiveNav();
+          scrollTicking = false;
+        });
+        scrollTicking = true;
+      }
+    }
+    window.addEventListener('scroll', onScroll);
+    onScroll(); // เรียกครั้งแรกตอนโหลดหน้า
+
+    // ================= Scroll reveal (fade + เลื่อนขึ้น) =================
+    const revealEls = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      revealEls.forEach(el => revealObserver.observe(el));
+    } else {
+      revealEls.forEach(el => el.classList.add('is-visible'));
+    }
+
+    // ================= Typewriter: ตำแหน่งที่สนใจใน Hero =================
+    const typedRoleEl = document.getElementById('typedRole');
+    const roleText = 'Web Developer';
+    if (typedRoleEl) {
+      let charIndex = 0;
+      function typeOnce() {
+        charIndex++;
+        typedRoleEl.textContent = roleText.slice(0, charIndex);
+        if (charIndex < roleText.length) {
+          setTimeout(typeOnce, 90);
+        }
+        // พิมพ์จบแล้วหยุด ปล่อยให้เคอร์เซอร์กะพริบค้างไว้
+      }
+      typeOnce();
+    }
+
+    // ================= Toast แจ้งเตือนสั้น ๆ =================
+    const toastEl = document.getElementById('toast');
+    let toastTimer;
+    function showToast(msg) {
+      toastEl.textContent = msg;
+      toastEl.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toastEl.classList.remove('show'), 2000);
+    }
+
+    // ================= ปุ่มคัดลอกเบอร์โทร/อีเมล =================
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+      btn.addEventListener('click', async (e) => {
+        e.preventDefault();
+        const text = btn.getAttribute('data-copy');
+        try {
+          await navigator.clipboard.writeText(text);
+          showToast('คัดลอกแล้ว: ' + text);
+        } catch (_) {
+          showToast('ไม่สามารถคัดลอกได้ ลองแตะค้างเพื่อคัดลอกเอง');
+        }
+      });
+    });
+
+    // ================= Screenshot Gallery (หลายภาพ เลื่อนซ้าย-ขวา) =================
     const galleryLinks = document.querySelectorAll('.screenshot-gallery');
     const modal = document.getElementById('galleryModal');
     const galleryImg = document.getElementById('galleryImg');
     const closeGallery = document.getElementById('closeGallery');
     const nextBtn = document.getElementById('nextImg');
     const prevBtn = document.getElementById('prevImg');
+    const counterEl = document.getElementById('galleryCounter');
+    const dotsEl = document.getElementById('galleryDots');
 
     let images = [];
     let index = 0;
 
-    function showImage(i) { galleryImg.src = images[i]; }
+    function renderDots() {
+      dotsEl.innerHTML = '';
+      if (images.length <= 1) { dotsEl.style.display = 'none'; return; }
+      dotsEl.style.display = '';
+      images.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'modal-dot' + (i === index ? ' active' : '');
+        dot.setAttribute('aria-label', `ไปที่ภาพที่ ${i + 1}`);
+        dot.addEventListener('click', () => { index = i; showImage(index); });
+        dotsEl.appendChild(dot);
+      });
+    }
+
+    function showImage(i) {
+      galleryImg.classList.add('fading');
+      setTimeout(() => {
+        galleryImg.src = images[i];
+        galleryImg.classList.remove('fading');
+      }, 120);
+      const multi = images.length > 1;
+      nextBtn.style.display = multi ? '' : 'none';
+      prevBtn.style.display = multi ? '' : 'none';
+      counterEl.style.display = multi ? '' : 'none';
+      counterEl.textContent = `${i + 1} / ${images.length}`;
+      renderDots();
+    }
     function openModal() {
       modal.classList.remove('hidden');
       modal.classList.add('flex');
@@ -398,6 +703,8 @@
       modal.classList.remove('flex');
       document.body.classList.remove('overflow-hidden');
     }
+    function showNext() { if (images.length) { index = (index + 1) % images.length; showImage(index); } }
+    function showPrev() { if (images.length) { index = (index - 1 + images.length) % images.length; showImage(index); } }
 
     galleryLinks.forEach(link => {
       link.addEventListener('click', e => {
@@ -414,18 +721,37 @@
         showImage(index);
         openModal();
       });
+      // รองรับคีย์บอร์ด (Enter / Space) เพราะตัวกระตุ้นตอนนี้คือรูปภาพ ไม่ใช่ลิงก์
+      link.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          link.click();
+        }
+      });
     });
 
-    nextBtn.addEventListener('click', () => {
-      if (images.length) { index = (index + 1) % images.length; showImage(index); }
-    });
-    prevBtn.addEventListener('click', () => {
-      if (images.length) { index = (index - 1 + images.length) % images.length; showImage(index); }
-    });
+    nextBtn.addEventListener('click', showNext);
+    prevBtn.addEventListener('click', showPrev);
 
     closeGallery.addEventListener('click', closeModal);
     modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
-    window.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal(); });
+    window.addEventListener('keydown', (e) => {
+      if (modal.classList.contains('hidden')) return;
+      if (e.key === 'Escape') closeModal();
+      if (e.key === 'ArrowRight') showNext();
+      if (e.key === 'ArrowLeft') showPrev();
+    });
+
+    // ปัดซ้าย-ขวาบนมือถือเพื่อเลื่อนดูภาพ
+    let touchStartX = 0;
+    const imageWrap = document.querySelector('.modal-image-wrap');
+    imageWrap?.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].clientX;
+    }, { passive: true });
+    imageWrap?.addEventListener('touchend', (e) => {
+      const deltaX = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(deltaX) > 40) { deltaX < 0 ? showNext() : showPrev(); }
+    }, { passive: true });
   </script>
 </body>
 
